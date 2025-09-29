@@ -1,3 +1,4 @@
 python-telegram-bot==20.6
 pytz
-git+https://github.com/supabase/supabase-py.git@main
+httpx==0.24.0
+git+https://github.com/supabase/supabase-py.git@v2.2.0
