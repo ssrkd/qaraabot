@@ -1,13 +1,13 @@
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, Chat
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
-from supabase import Client, create_client
+from supabase import create_client
 from datetime import datetime, timedelta
 import pytz
 
 # --- Supabase ---
 SUPABASE_URL = "https://jghlvdgtowjattktkejw.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpnaGx2ZGd0b3dqYXR0a3RrZWp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkxNTc2NzYsImV4cCI6MjA3NDczMzY3Nn0.IxceNDdpFHPPkOwjlk644C1fji4wAhQr2dR8FmEKVas"
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # --- Telegram ---
 BOT_TOKEN = "8458767187:AAHV6sl14LzVt1Bnk49LvoR6QYg7MAvbYhA"
