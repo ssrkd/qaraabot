@@ -57,13 +57,15 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if user_id in OWNER_IDS:
         await update.message.reply_text(
             "📋 Доступные команды:\n"
+            "/start — запуск\n"
+            "/help — список команд\n"
             "/zov — отправить сообщение в группу\n"
             "/status — состояние бота\n"
             # "/staff — список сотрудников\n"
             "/reports — просмотреть отчёты\n"
+            "/list_sellers — просмотреть продавцов\n"
             "/add_seller — добавить продавца\n"
-            "/remove_seller — удалить продавца\n"
-            "/list_sellers — просмотреть продавцов"
+            "/remove_seller — удалить продавца"
         )
     elif user_id in SELLER_IDS:
         await update.message.reply_text("📋 Доступные команды:\n/report — сдать отчёт")
